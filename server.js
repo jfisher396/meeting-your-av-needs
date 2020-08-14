@@ -1,7 +1,7 @@
 const express = require("express");
-
+const path = require('path')
 const mongoose = require("mongoose");
-const routes = require("./routes");
+// const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -13,10 +13,13 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 }
 // Add routes, both API and view
-app.use(routes);
+// app.use(routes);
+app.get("*", (req,res) => {
+    res.sendFile(path.join(_dirname, "./client/build/index.html"));
+})
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/avrentals");
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/avrentals");
 
 // Start the API server
 app.listen(PORT, function () {
