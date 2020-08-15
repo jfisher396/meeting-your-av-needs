@@ -14,14 +14,29 @@ export default class Projectors extends Component {
   render() {
     const { projectors } = this.state;
     return (
-      <div>
+      <>
         <h1>This is the inventory page</h1>
+
         {projectors.map((item) => (
-          <div key={item._id}>
-            <h1>{item.model}</h1>
+          <div className="container">
+            <table className="table">
+              <thead>
+                <tr>
+                  <th scope="col">Model</th>
+                  <th scope="col">Quantity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr key={item._id}>
+                  
+                  <td>{item.model}</td>
+                  <td>{item.quantity}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         ))}
-      </div>
+      </>
     );
   }
 }
