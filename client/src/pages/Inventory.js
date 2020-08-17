@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-
 import Projectors from "../components/ProjectorsList"
+import Screens from "../components/ScreensList"
+import Laptops from "../components/CompList"
 
 export default class Inventory extends Component {
 
@@ -21,7 +22,7 @@ export default class Inventory extends Component {
                 <div class="cell">
                   <div className="card">
                     <div className="card-section">
-                      <Projectors />
+                      <Screens />
                     </div>
                   </div>
                 </div>
@@ -29,7 +30,7 @@ export default class Inventory extends Component {
                 <div class="cell">
                   <div className="card">
                     <div className="card-section">
-                      <Projectors />
+                      <Laptops />
                     </div>
                   </div>
                 </div>
