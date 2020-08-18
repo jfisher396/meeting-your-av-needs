@@ -1,3 +1,3 @@
 module.exports = {
-  Proj: require("./projector")
+  Gear: require("./gear")
 };

@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const projRoutes = require("./projectors");
+const gearRoutes = require("./gears");
 
 // proj routes
-router.use("/projectors", projRoutes);
+router.use("/gears", gearRoutes);
 
 module.exports = router;

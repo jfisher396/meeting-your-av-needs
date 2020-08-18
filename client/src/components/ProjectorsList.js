@@ -7,8 +7,11 @@ export default class Projectors extends Component {
   };
   componentDidMount() {
     axios
-      .get("/api/projectors")
-      .then((response) => this.setState({ projectors: response.data }));
+      .get("/api/gears")
+      .then((response) => {
+        console.log(response)
+        this.setState({ projectors: response.data.slice(0, 3) })
+      });
   }
 
   render() {
@@ -21,15 +24,15 @@ export default class Projectors extends Component {
                 <thead>
                     <tr>
                     <th scope="col">Model</th>
-                    <th scope="col">Quantity Available</th>
+                    {/* <th scope="col">Quantity Available</th> */}
                     </tr>
                 </thead>
                 <tbody>
                     {projectors.map((item) => {
                      return   (   
                         <tr key={item._id}>
-                            <td>{item.model}</td>
-                            <td>{item.quantity}</td>
+                            <td>{item.proj}</td>
+                            <td><button type="button" className="success button">Select</button></td>
                         </tr>
                      )
                      })}

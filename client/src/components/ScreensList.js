@@ -7,8 +7,8 @@ export default class Screens extends Component {
     };
     componentDidMount() {
         axios
-            .get("/api/screens")
-            .then((response) => this.setState({ screens: response.data }));
+            .get("/api/gears")
+            .then((response) => this.setState({ screens: response.data.slice(5) }));
     }
 
     render() {
@@ -20,18 +20,26 @@ export default class Screens extends Component {
                     <table className="table">
                         <thead>
                             <tr>
-                                <th scope="col">Model</th>
-                                <th scope="col">Quantity Available</th>
+                                <th scope="col">Size</th>
+                                {/* <th scope="col">Quantity Available</th> */}
                             </tr>
                         </thead>
                         <tbody>
                             {screens.map((item) => {
                                 return (
-                                    <tr key={item._id}>
-                                        <td>{item.model}</td>
-                                        <td>{item.quantity}</td>
-                                    </tr>
-                                )
+                                  <tr key={item._id}>
+                                    <td>{item.screen}</td>
+                                    {/* <td>{item.quantity}</td> */}
+                                    <td>
+                                      <button
+                                        type="button"
+                                        className="success button"
+                                      >
+                                        Select
+                                      </button>
+                                    </td>
+                                  </tr>
+                                );
                             })}
                         </tbody>
                     </table>

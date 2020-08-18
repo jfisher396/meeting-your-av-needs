@@ -1,14 +1,14 @@
 const router = require("express").Router();
-const projController = require("../../controllers/projectorsController");
+const gearController = require("../../controllers/gearController");
 
 // Matches with "/api/projectors"
 router.route("/")
-.get(projController.findAll)
+.get(gearController.findAll)
 
 // Matches with "/api/projectors/:id"
 router
   .route("/:id")
-  .get(projController.findById)
+  .get(gearController.findById)
   // .put(projController.update)
   // .delete(projController.remove);
 
