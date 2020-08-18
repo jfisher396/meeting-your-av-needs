@@ -1,4 +1,13 @@
+body{
+    background-image: url("./media/meeting room.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
+
+}
+
 .homeBox {
+    background-color: whitesmoke;
     border-style: solid;
     border-color: black;
 }

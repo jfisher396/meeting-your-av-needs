@@ -10,8 +10,8 @@ export default class Inventory extends Component {
         return (
           <>
             <div className="grid-container">
-              <div class="grid-x grid-margin-x small-up-2 medium-up-3">
-                <div class="cell">
+              <div className="grid-x grid-margin-x small-up-2 medium-up-3">
+                <div className="cell">
                   <div className="card">
                     <div className="card-section">
                       <Projectors />
@@ -19,7 +19,7 @@ export default class Inventory extends Component {
                   </div>
                 </div>
 
-                <div class="cell">
+                <div className="cell">
                   <div className="card">
                     <div className="card-section">
                       <Screens />
@@ -27,7 +27,7 @@ export default class Inventory extends Component {
                   </div>
                 </div>
 
-                <div class="cell">
+                <div className="cell">
                   <div className="card">
                     <div className="card-section">
                       <Laptops />
