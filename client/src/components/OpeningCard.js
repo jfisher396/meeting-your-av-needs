@@ -5,7 +5,7 @@ export default class OpeningCard extends Component {
         return (
             <div className="grid-x grid-margin-x">
                 <div className="homeBox cell medium-6 large-4">
-                    <a href="/inventory">
+                    <a href="/order">
                         <div className="media-object">
                             <div className="media-object-section">
                                 <div className="thumbnail">

@@ -12,7 +12,7 @@ export default class Laptops extends Component {
   }
 
   handleButtonClick = (id) => {
-    
+    console.log(id)
   };
 
   render() {
