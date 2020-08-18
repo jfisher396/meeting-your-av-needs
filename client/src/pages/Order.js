@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Projectors from "../components/ProjectorsList"
 import Screens from "../components/ScreensList"
 import Laptops from "../components/CompList"
+import OrderTable from '../components/OrderTable'
 
 export default class Order extends Component {
 
@@ -35,7 +36,9 @@ export default class Order extends Component {
                   </div>
                 </div>
               </div>
-              <div>Order Table Here</div>
+              <div>
+                <OrderTable />
+              </div>
             </div>
           </>
         );
