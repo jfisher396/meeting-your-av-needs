@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import API from "../utils/API"
 
 export default class OrderTable extends Component {
   state = {
@@ -17,6 +18,12 @@ export default class OrderTable extends Component {
 
   handleButtonClick = (event) => {
     event.preventDefault();
+    console.log(this.state.orders)
+    API.saveOrder({
+      item: this.state.orders
+      // authors: this.state.result.authors.join(", "),
+      
+    }).catch((err) => console.log(err));
   };
 
   render() {
@@ -35,7 +42,7 @@ export default class OrderTable extends Component {
           <tbody>
             {!fetching &&
               orders[0].map((item) => {
-                console.log(item)
+                // console.log(item)
                 return (
                   <tr key={item._id}>
                     {/* <tr key={item._id}> */}

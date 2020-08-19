@@ -9,7 +9,7 @@ export default class EnterInfo extends Component {
         <div className="grid-container">
           <div className="grid-x grid-margin-x">
             <div className="cell medium-6">
-              <form>
+              <form method="POST" action="send">
                 <input type="text" name="name" placeholder="Name" />
                 <input type="text" name="phone" placeholder="Phone" />
                 <input type="text" name="email" placeholder="Email" />

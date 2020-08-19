@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const orderSchema = new Schema({
     item: { type: String, required: true },
-    quantity: { type: Number, required: true }
+    
 });
 
 const Order = mongoose.model("Order", orderSchema);
