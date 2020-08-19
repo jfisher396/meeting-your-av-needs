@@ -25,7 +25,9 @@ export default class OrderTable extends Component {
         <table className="table">
           <thead>
             <tr>
-              <th scope="col">Your Order:</th>
+              <th scope="col">Projector(s):</th>
+              <th scope="col">Screen(s):</th>
+              <th scope="col">Laptop(s):</th>
             </tr>
           </thead>
           <tbody>
@@ -33,6 +35,8 @@ export default class OrderTable extends Component {
               return (
                 <tr key={item._id}>
                   <td>{item.proj}</td>
+                  <td>{item.screen}</td>
+                  <td>{item.comp}</td>
                 </tr>
               );
             })}
