@@ -4,15 +4,20 @@ import axios from "axios";
 export default class Screens extends Component {
   state = {
     screens: [],
+    orderScreens: []
   };
   componentDidMount() {
-    axios
-      .get("/api/gears")
-      .then((response) => this.setState({ screens: response.data.slice(5) }));
+    axios.get("/api/gears").then((response) => 
+      this.setState({ screens: response.data.slice(5) }));
   }
 
   handleButtonClick = (id) => {
-    console.log(id);
+    axios.get("/api/gears/" + id).then((response) => {
+      this.setState((prevState) => ({
+        orderScreens: [...prevState.orderScreens, response.data],
+      }));
+      this.props.handleScreens(this.state.orderScreens);
+    });
   };
 
   render() {

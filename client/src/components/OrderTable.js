@@ -10,7 +10,12 @@ export default class OrderTable extends Component {
           this.setState({
               orders: [...this.props.orderP]
           }) 
-      }
+      };
+      // if (prevProps.orderS !== this.props.orderS) {
+      //   this.setState({
+      //     orders: [...this.props.orderS],
+      //   });
+      // }
     }
 
   handleButtonClick = (event) => {

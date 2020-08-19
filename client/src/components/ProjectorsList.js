@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-
 export default class Projectors extends Component {
   state = {
     projectors: [],
@@ -53,7 +52,6 @@ export default class Projectors extends Component {
                         </button>
                       </td>
                     </tr>
-                    {/* <Select options={item} /> */}
                   </>
                 );
               })}

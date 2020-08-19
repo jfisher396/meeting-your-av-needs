@@ -4,6 +4,7 @@ import axios from "axios";
 export default class Laptops extends Component {
   state = {
     laptops: [],
+    orderLaptops: []
   };
   componentDidMount() {
     axios
@@ -12,7 +13,12 @@ export default class Laptops extends Component {
   }
 
   handleButtonClick = (id) => {
-    console.log(id)
+    axios.get("/api/gears/" + id).then((response) => {
+      this.setState((prevState) => ({
+        orderLaptops: [...prevState.orderLaptops, response.data],
+      }));
+      this.props.handleLaptops(this.state.orderLaptops);
+    });
   };
 
   render() {
