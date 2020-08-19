@@ -3,28 +3,25 @@ import React, { Component } from "react";
 export default class OrderTable extends Component {
   state = {
     orders: [],
+    fetching: true,
   };
 
   componentDidUpdate(prevProps) {
-      if (prevProps.orderP !== this.props.orderP) {
-          this.setState({
-              orders: [...this.props.orderP]
-          }) 
-      };
-      // if (prevProps.orderS !== this.props.orderS) {
-      //   this.setState({
-      //     orders: [...this.props.orderS],
-      //   });
-      // }
+    if (prevProps.ordering !== this.props.ordering) {
+      this.setState({
+        orders: this.props.ordering,
+        fetching: false,
+      });
     }
+  }
 
   handleButtonClick = (event) => {
     event.preventDefault();
   };
 
   render() {
-      console.log(this.state)
-      const { orders } = this.state
+    // console.log(this.state);
+    const { orders, fetching } = this.state;
     return (
       <div>
         <table className="table">
@@ -36,26 +33,25 @@ export default class OrderTable extends Component {
             </tr>
           </thead>
           <tbody>
-            {orders.map((item) => {
-              return (
-                <tr key={item._id}>
-                  <td>{item.proj}</td>
-                  <td>{item.screen}</td>
-                  <td>{item.comp}</td>
-                </tr>
-              );
-            })}
-            <td>
-              <button
-                onClick={this.handleButtonClick}
-                type="button"
-                className="primary button"
-              >
-                Confirm order and go to customer info screen
-              </button>
-            </td>
+            {!fetching &&
+              orders[0].map((item) => {
+                console.log(item)
+                return (
+                  <tr key={item._id}>
+                    {/* <tr key={item._id}> */}
+                    <td>{item.proj}</td>
+                  </tr>
+                );
+              })}
           </tbody>
         </table>
+        <button
+          onClick={this.handleButtonClick}
+          type="button"
+          className="primary button"
+        >
+          Confirm order and go to customer info screen
+        </button>
       </div>
     );
   }

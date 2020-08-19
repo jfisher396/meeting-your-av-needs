@@ -12,12 +12,9 @@ class NavBar extends Component {
                 AV Equipment Rental
               </Link>
             </li>
-            {/* <li><a href="#">One</a></li>
-      <li><a href="#">Two</a></li>
-      <li><a href="#">Three</a></li> */}
           </ul>
         </div>
-        <div className="top-bar-right">
+        <div>
           800-555-1234
         </div>
       </div>

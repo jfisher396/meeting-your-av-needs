@@ -55,9 +55,7 @@ export default class Order extends Component {
           </div>
           <div>
             <OrderTable
-              orderP={this.state.projectors}
-              orderS={this.state.screens}
-              orderL={this.state.laptops}
+              ordering={[this.state.projectors,this.state.screens,this.state.laptops]}
             />
           </div>
         </div>

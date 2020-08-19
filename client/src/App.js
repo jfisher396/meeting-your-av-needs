@@ -6,6 +6,7 @@ import Home from "./pages/Home"
 import Inventory from './pages/Inventory';
 import Order from './pages/Order';
 import EnterInfo from './pages/EnterInfo';
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <EnterInfo />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }

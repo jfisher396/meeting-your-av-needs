@@ -38,6 +38,7 @@ export default class Projectors extends Component {
             </thead>
             <tbody>
               {projectors.map((item) => {
+              
                 return (
                   <>
                     <tr key={item._id}>
