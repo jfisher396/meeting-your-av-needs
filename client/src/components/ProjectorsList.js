@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import Select from "react-select";
 import axios from "axios";
+
 
 export default class Projectors extends Component {
   state = {
     projectors: [],
+    orderProjectors: []
   };
   componentDidMount() {
     axios.get("/api/gears").then((response) => {
@@ -13,12 +14,19 @@ export default class Projectors extends Component {
   }
 
   handleButtonClick = (id) => {
-    console.log(id);
+    axios.get("/api/gears/"+ id).then((response) => {
+      this.setState((prevState) => ({
+        orderProjectors: [
+          ...prevState.orderProjectors,response.data
+        ]
+      }));
+      this.props.handleProjectors(this.state.orderProjectors)
+    })
   };
 
   render() {
     const { projectors } = this.state;
-
+    // console.log(this.state)
     return (
       <>
         <div className="container">

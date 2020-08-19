@@ -1,16 +1,25 @@
 import React, { Component } from "react";
-import axios from "axios";
 
 export default class OrderTable extends Component {
   state = {
     orders: [],
   };
 
+  componentDidUpdate(prevProps) {
+      if (prevProps.orderP !== this.props.orderP) {
+          this.setState({
+              orders: [...this.props.orderP]
+          }) 
+      }
+    }
+
   handleButtonClick = (event) => {
     event.preventDefault();
   };
 
   render() {
+      console.log(this.state)
+      const { orders } = this.state
     return (
       <div>
         <table className="table">
@@ -20,16 +29,13 @@ export default class OrderTable extends Component {
             </tr>
           </thead>
           <tbody>
-            {/* {orders.map((item) => {
+            {orders.map((item) => {
               return (
-                <>
-                  <tr key={item._id}>
-                    <td>{item.item}</td>
-                    <td></td>
-                  </tr>
-                </>
+                <tr key={item._id}>
+                  <td>{item.proj}</td>
+                </tr>
               );
-            })} */}
+            })}
             <td>
               <button
                 onClick={this.handleButtonClick}

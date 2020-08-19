@@ -5,9 +5,16 @@ import Laptops from "../components/CompList"
 import OrderTable from '../components/OrderTable'
 
 export default class Order extends Component {
+ state = {
+    projectors: []
+ }
+
+    handleProjectors = (projectors)=> {
+      this.setState({projectors})
+    }
 
     render() {
-        
+        // console.log(this.state)
         return (
           <>
             <div className="grid-container">
@@ -15,7 +22,9 @@ export default class Order extends Component {
                 <div className="cell">
                   <div className="card">
                     <div className="card-section">
-                      <Projectors />
+                      <Projectors 
+                        handleProjectors = {this.handleProjectors}
+                      />
                     </div>
                   </div>
                 </div>
@@ -37,7 +46,9 @@ export default class Order extends Component {
                 </div>
               </div>
               <div>
-                <OrderTable />
+                <OrderTable
+                orderP = {this.state.projectors}
+                />
               </div>
             </div>
           </>
