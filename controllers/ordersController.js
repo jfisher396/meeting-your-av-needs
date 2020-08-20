@@ -1,4 +1,4 @@
-const db = require("../models/index");
+const db = require("../models/order");
 
 // Defining methods for the booksController
 module.exports = {
@@ -15,7 +15,6 @@ module.exports = {
   },
   create: function (req, res) {
     db.Order.create(req.body)
-        console.log(req.body)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
