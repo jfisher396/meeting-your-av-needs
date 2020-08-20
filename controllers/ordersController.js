@@ -1,4 +1,4 @@
-const db = require("../models/order");
+const db = require("../models");
 
 // Defining methods for the booksController
 module.exports = {
@@ -14,8 +14,13 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   create: function (req, res) {
-    db.Order.create(req.body)
-      .then((dbModel) => res.json(dbModel))
+    let itemsToAdd = req.body.items.flat()
+    db.Order.create({items: itemsToAdd})
+      .then((dbModel) => {
+        console.log("something")
+        res.json(dbModel)
+      }
+        )
       .catch((err) => res.status(422).json(err));
   },
   remove: function (req, res) {

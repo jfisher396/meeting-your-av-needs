@@ -18,10 +18,10 @@ export default class OrderTable extends Component {
 
   handleButtonClick = (event) => {
     event.preventDefault();
-    console.log(this.state.orders)
+    // console.log(this.state.orders)
     API.saveOrder({
-      item: this.state.orders
-      // authors: this.state.result.authors.join(", "),
+      items: this.state.orders
+      
       
     }).catch((err) => console.log(err));
   };
