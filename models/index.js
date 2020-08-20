@@ -1,4 +1,4 @@
 module.exports = {
-  Gear: require("./gear")
+  Gear: require("./gear"),
   Order: require("./gear")
 };

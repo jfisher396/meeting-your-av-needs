@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const gearSchema = new Schema({
-    model: { type: String, required: true },
-    quantity: { type: Number, required: true },
+    model: { type: String },
+    quantity: { type: Number }
 });
 
 const Gear = mongoose.model("Gear", gearSchema);
