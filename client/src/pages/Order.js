@@ -8,8 +8,18 @@ export default class Order extends Component {
   state = {
     projectors: [],
     screens: [],
-    laptops: []
+    laptops: [],
   };
+  // constructor (props) {
+  //   super(props)
+  //   this.state = {
+  //     projectors: [],
+  //     screens: [],
+  //     laptops: [],
+  //   };
+  // }
+
+  
 
   handleProjectors = (projectors) => {
     this.setState({ projectors });
@@ -55,7 +65,12 @@ export default class Order extends Component {
           </div>
           <div>
             <OrderTable
-              ordering={[this.state.projectors,this.state.screens,this.state.laptops]}
+              ordering={[
+                this.state.projectors,
+                this.state.screens,
+                this.state.laptops,
+              ]}
+              history = {this.props.history}
             />
           </div>
         </div>

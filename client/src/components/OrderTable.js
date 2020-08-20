@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import API from "../utils/API"
+import { Link } from "react-router-dom";
+import API from "../utils/API";
 
 export default class OrderTable extends Component {
   state = {
@@ -16,14 +17,17 @@ export default class OrderTable extends Component {
     }
   }
 
+  componentDidMount() {
+    console.log(this.props);
+  }
+
   handleButtonClick = (event) => {
     event.preventDefault();
     // console.log(this.state.orders)
     API.saveOrder({
-      items: this.state.orders
-      
-      
-    }).catch((err) => console.log(err));
+      items: this.state.orders,
+    }).then(()=>this.props.history.push("/customer-info"))
+    .catch((err) => console.log(err));
   };
 
   render() {
@@ -34,31 +38,32 @@ export default class OrderTable extends Component {
         <table className="table">
           <thead>
             <tr>
-              <th scope="col">Projector(s):</th>
-              <th scope="col">Screen(s):</th>
-              <th scope="col">Laptop(s):</th>
+              <th scope="col">Your items:</th>
             </tr>
           </thead>
           <tbody>
             {!fetching &&
-              orders[0].map((item) => {
-                // console.log(item)
+              orders.flat().map((item) => {
+                // console.log(orders.flat())
                 return (
-                  <tr key={item._id}>
-                    {/* <tr key={item._id}> */}
-                    <td>{item.proj}</td>
-                  </tr>
+                  <>
+                    <tr key={item._id}>{item.proj}</tr>
+                    <tr key={item._id}>{item.screen}</tr>
+                    <tr key={item._id}>{item.comp}</tr>
+                  </>
                 );
               })}
           </tbody>
         </table>
-        <button
-          onClick={this.handleButtonClick}
-          type="button"
-          className="primary button"
-        >
-          Confirm order and go to customer info screen
-        </button>
+        <Link to="/customer-info">
+          <button
+            onClick={this.handleButtonClick}
+            type="button"
+            className="primary button"
+          >
+            Confirm order and go to customer info screen
+          </button>
+        </Link>
       </div>
     );
   }

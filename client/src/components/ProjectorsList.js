@@ -40,7 +40,7 @@ export default class Projectors extends Component {
               {projectors.map((item) => {
               
                 return (
-                  <>
+                  
                     <tr key={item._id}>
                       <td>{item.proj}</td>
                       <td>
@@ -53,7 +53,7 @@ export default class Projectors extends Component {
                         </button>
                       </td>
                     </tr>
-                  </>
+                
                 );
               })}
             </tbody>

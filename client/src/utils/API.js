@@ -6,7 +6,7 @@ export default {
   },
 
   saveOrder: function (orderData) {
-      console.log(orderData)
+      // console.log(orderData)
     return axios.post("/api/orders", orderData);
   },
 

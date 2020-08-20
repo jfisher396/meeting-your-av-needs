@@ -8,8 +8,8 @@ class NavBar extends Component {
         <div className="top-bar-left">
           <ul className="dropdown menu" data-dropdown-menu>
             <li className="menu-text">
-              <Link to="/" className="link">
-                AV Equipment Rental
+              <Link to="/home" className="link">
+                Meeting Your (AV) Needs
               </Link>
             </li>
           </ul>

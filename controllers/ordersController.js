@@ -17,7 +17,7 @@ module.exports = {
     let itemsToAdd = req.body.items.flat()
     db.Order.create({items: itemsToAdd})
       .then((dbModel) => {
-        console.log("something")
+        console.log("order created")
         res.json(dbModel)
       }
         )
