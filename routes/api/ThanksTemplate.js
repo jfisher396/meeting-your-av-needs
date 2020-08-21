@@ -1,5 +1,5 @@
 const Thanks = data => {
-
+    console.log(data)
     return `
         <DOCTYPE html>
         <html style="margin: 0; padding: 0;">
@@ -11,7 +11,7 @@ const Thanks = data => {
         <body style="margin: 0; padding: 0;">
             <br />
             <br />
-            <div>Hello </div>
+            <div>Thank you for your reservation!</div>
             <br />
             <br />
         </body>

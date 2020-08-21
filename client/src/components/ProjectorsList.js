@@ -19,7 +19,7 @@ export default class Projectors extends Component {
           ...prevState.orderProjectors,response.data
         ]
       }));
-      console.log(this.state.orderProjectors)
+      // console.log(this.state.orderProjectors)
       this.props.handleProjectors(this.state.orderProjectors)
     })
   };

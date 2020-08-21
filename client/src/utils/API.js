@@ -10,7 +10,4 @@ export default {
     return axios.post("/api/orders", orderData);
   },
 
-//   deleteBook: function (id) {
-//     return axios.delete("/api/books/" + id);
-//   },
 };

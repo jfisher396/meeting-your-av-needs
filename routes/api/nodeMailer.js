@@ -1,6 +1,5 @@
 const nodemailer = require('nodemailer')
 const { Thanks } = require("./ThanksTemplate");
-const { getMaxListeners } = require('../../models/gear');
 
 const getEmailData = (to, name, template) => {
     let data = null;
@@ -33,21 +32,21 @@ const getEmailData = (to, name, template) => {
 const sendEmail = (to, name, type) => {
     
     let smtpTransport = nodemailer.createTransport({
-      host: "smtp.ethereal.email",
-      port: 587,
-      auth: {
-        user: "aryanna.ruecker42@ethereal.email",
-        pass: "gdpDGewsnrE1WQRGe7",
-      },
+      // host: "smtp.ethereal.email",
+      // port: 587,
+      // auth: {
+      //   user: "aryanna.ruecker42@ethereal.email",
+      //   pass: "gdpDGewsnrE1WQRGe7",
+      // },
 
-      //     service: "gmail",
-      //     host: "smtp.gmail.com",
-      //     port: 587,
-      //     secure: true,
-      //     auth: {
-      //   user: "avneeds42@gmail.com",
-      //   pass: "bootcamp2020"
-      //     }
+      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: true,
+      auth: {
+        user: "avneeds42@gmail.com",
+        pass: "zabaflvhwqvczufe",
+      },
     });
 
     const mail = getEmailData(to,name,type)

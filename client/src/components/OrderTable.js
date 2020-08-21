@@ -15,12 +15,12 @@ export default class OrderTable extends Component {
         orders: this.props.ordering,
         fetching: false,
       });
-      console.log(this.props.ordering)
+      // console.log(this.props.ordering)
     }
   }
 
   componentDidMount() {
-    console.log(this.props.ordering.flat());
+    // console.log(this.props.ordering.flat());
   }
 
   handleButtonClick = (event) => {
@@ -39,7 +39,7 @@ export default class OrderTable extends Component {
   };
 
   render() {
-    console.log(this.state.orders.flat());
+    // console.log(this.state.orders.flat());
     const { orders, fetching } = this.state;
     return (
       <div>
@@ -51,23 +51,18 @@ export default class OrderTable extends Component {
           </thead>
           <tbody>
             <tr>
-              {!fetching &&
-                orders.flat().map((item, index) => {
-                  console.log(item)
-                  return (
-                    <>
-                      <p id={index} key={index}>
-                        {item.proj}
+              <td>
+                {!fetching &&
+                  orders.flat().map((item, index) => {
+                    return (
+                      <p id={item._id} key={`${item._id}_${index}`}>
+                        {(item.proj && item.proj) ||
+                          (item.screen && item.screen) ||
+                          (item.comp && item.comp)}
                       </p>
-                       <p id={index} key={index}>
-                        {item.screen}
-                      </p>
-                      {/* <p id={index} key={index}>
-                        {item.comp}
-                      </p> */}
-                    </>
-                  );
-                })}
+                    );
+                  })}
+              </td>
             </tr>
           </tbody>
         </table>
