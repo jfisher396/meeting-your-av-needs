@@ -24,10 +24,16 @@ export default class OrderTable extends Component {
   handleButtonClick = (event) => {
     event.preventDefault();
     // console.log(this.state.orders)
-    API.saveOrder({
-      items: this.state.orders,
-    }).then(()=>this.props.history.push("/customer-info"))
-    .catch((err) => console.log(err));
+    //need an if statement here to confirm items have been selected
+    if (this.state.orders) {
+      API.saveOrder({
+        items: this.state.orders,
+      })
+        .then(() => this.props.history.push("/customer-info"))
+        .catch((err) => console.log(err));
+    } else {
+      alert('Please select at least one item')
+    }
   };
 
   render() {

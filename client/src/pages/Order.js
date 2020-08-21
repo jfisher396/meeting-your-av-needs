@@ -10,17 +10,7 @@ export default class Order extends Component {
     screens: [],
     laptops: [],
   };
-  // constructor (props) {
-  //   super(props)
-  //   this.state = {
-  //     projectors: [],
-  //     screens: [],
-  //     laptops: [],
-  //   };
-  // }
-
   
-
   handleProjectors = (projectors) => {
     this.setState({ projectors });
   };
