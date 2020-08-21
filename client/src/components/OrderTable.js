@@ -9,16 +9,18 @@ export default class OrderTable extends Component {
   };
 
   componentDidUpdate(prevProps) {
+
     if (prevProps.ordering !== this.props.ordering) {
       this.setState({
         orders: this.props.ordering,
         fetching: false,
       });
+      console.log(this.props.ordering)
     }
   }
 
   componentDidMount() {
-    console.log(this.props);
+    console.log(this.props.ordering.flat());
   }
 
   handleButtonClick = (event) => {
@@ -37,7 +39,7 @@ export default class OrderTable extends Component {
   };
 
   render() {
-    // console.log(this.state);
+    console.log(this.state.orders.flat());
     const { orders, fetching } = this.state;
     return (
       <div>
@@ -48,17 +50,25 @@ export default class OrderTable extends Component {
             </tr>
           </thead>
           <tbody>
-            {!fetching &&
-              orders.flat().map((item) => {
-                // console.log(orders.flat())
-                return (
-                  <>
-                    <tr key={item._id}>{item.proj}</tr>
-                    <tr key={item._id}>{item.screen}</tr>
-                    <tr key={item._id}>{item.comp}</tr>
-                  </>
-                );
-              })}
+            <tr>
+              {!fetching &&
+                orders.flat().map((item, index) => {
+                  console.log(item)
+                  return (
+                    <>
+                      <p id={index} key={index}>
+                        {item.proj}
+                      </p>
+                       <p id={index} key={index}>
+                        {item.screen}
+                      </p>
+                      {/* <p id={index} key={index}>
+                        {item.comp}
+                      </p> */}
+                    </>
+                  );
+                })}
+            </tr>
           </tbody>
         </table>
         <Link to="/customer-info">
