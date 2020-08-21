@@ -25,6 +25,7 @@ export default function InfoForm() {
       email: email
     }
     axios.post("/api/sendMail", dataToSubmit);
+    alert("Thank you for your order!");
   }
 
   return (
@@ -54,7 +55,7 @@ export default function InfoForm() {
                 className="success button"
                 value="Confirm order"
               >
-                Confirm Order
+                Click here to recieve confirmation email
               </button>
             </form>
           </div>

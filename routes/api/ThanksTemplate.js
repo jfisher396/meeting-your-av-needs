@@ -11,7 +11,9 @@ const Thanks = data => {
         <body style="margin: 0; padding: 0;">
             <br />
             <br />
-            <div>Thank you for your reservation!</div>
+            <div>
+            <p>Thank you for your reservation! Your equipment will be ready for pickup within two hours of this confirmation.</p>
+            </div>
             <br />
             <br />
         </body>
