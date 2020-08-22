@@ -4,8 +4,7 @@ const db = require("../models");
 // This file empties the Gears collection and inserts the items below
 
 mongoose.connect(
-    process.env.MONGODB_URI ||
-    "mongodb://localhost/avrentals"
+  "mongodb://heroku_c4zr2ntj:86ikt9uu9bk8u05ojn1289mei6@ds145365.mlab.com:45365/heroku_c4zr2ntj"
 );
 
 const gearSeed = [
