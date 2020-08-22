@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2f5129a8.chunk.css",
+    "main.js": "/static/js/main.fada0255.chunk.js",
+    "main.js.map": "/static/js/main.fada0255.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.14d84dd7.js",
+    "runtime-main.js.map": "/static/js/runtime-main.14d84dd7.js.map",
+    "static/js/2.a926d368.chunk.js": "/static/js/2.a926d368.chunk.js",
+    "static/js/2.a926d368.chunk.js.map": "/static/js/2.a926d368.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.9a76466d69d470348f2b596d4ba5e7ac.js": "/precache-manifest.9a76466d69d470348f2b596d4ba5e7ac.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.2f5129a8.chunk.css.map": "/static/css/main.2f5129a8.chunk.css.map",
+    "static/js/2.a926d368.chunk.js.LICENSE.txt": "/static/js/2.a926d368.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/meeting room.7cf9ac6d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.14d84dd7.js",
+    "static/js/2.a926d368.chunk.js",
+    "static/css/main.2f5129a8.chunk.css",
+    "static/js/main.fada0255.chunk.js"
+  ]
+}
