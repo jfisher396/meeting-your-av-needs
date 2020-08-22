@@ -32,13 +32,7 @@ const getEmailData = (to, name, template) => {
 const sendEmail = (to, name, type) => {
     
     let smtpTransport = nodemailer.createTransport({
-      // host: "smtp.ethereal.email",
-      // port: 587,
-      // auth: {
-      //   user: "aryanna.ruecker42@ethereal.email",
-      //   pass: "gdpDGewsnrE1WQRGe7",
-      // },
-
+      
       service: "gmail",
       host: "smtp.gmail.com",
       port: 587,
