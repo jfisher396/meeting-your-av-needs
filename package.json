@@ -29,7 +29,8 @@
     "express": "^4.16.3",
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
-    "nodemailer": "^6.4.11"
+    "nodemailer": "^6.4.11",
+    "react-scripts": "^3.4.3"
   },
   "keywords": [],
   "description": ""
