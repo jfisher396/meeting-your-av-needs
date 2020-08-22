@@ -26,7 +26,14 @@ app.post("/api/sendMail", (req, res) => {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/avrentals");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/avrentals",
+{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false
+})
+;
 
 // Start the API server
 app.listen(PORT, function () {

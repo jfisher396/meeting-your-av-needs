@@ -22,23 +22,23 @@ const gearSeed = [
     
   },
   {
-    comp: "PC/Windows",
+    comp: "PC/Windows Laptop",
     
   },
   {
-    comp: "Macbook",
+    comp: "Macbook Pro",
     
   },
   {
-    screen: "5'x 5'",
+    screen: "5' Screen",
     
   },
   {
-    screen: "7'x 7'",
+    screen: "7' Screen",
     
   },
   {
-    screen: "10'x 10'",
+    screen: "10' Screen",
     
   },
 ];
