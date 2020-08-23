@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class OpeningCard extends Component {
     render() {
         return (
-            <div className="grid-x">
+            <div className="grid-x grid-padding-x align-center">
                 <div className="homeBox cell large-4">
                     <a href="/order">
                         <div className="media-object">

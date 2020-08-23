@@ -9,11 +9,12 @@ export default class Home extends Component {
         return (
           <>
             <div className="grid-container">
-              <div className="cell large-4"></div>
-              <div className="grid-x">
+
+              
+              <div className="grid-x grid-padding-x align-center">
                 <OpeningCard />
               </div>
-              <div className="cell large-4"></div>
+              
             </div>
           </>
         );
