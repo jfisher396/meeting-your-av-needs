@@ -11,18 +11,26 @@ body{
     background-color: whitesmoke;
     border-style: solid;
     border-color: black;
-    
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
 }
 .table {
     background-color: whitesmoke;
 }
 
 .footer {
-    
+    position: sticky;
+    bottom: 0;
+    right: 0;
     background-color: whitesmoke;
-    padding: 30px 50px;
+    padding: 10px 50px;
 }
 
 footer p {
     display: block
+}
+
+footer span {
+    text-decoration:
 }

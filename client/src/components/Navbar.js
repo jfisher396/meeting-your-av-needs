@@ -14,9 +14,6 @@ class NavBar extends Component {
             </li>
           </ul>
         </div>
-        <div>
-          800-555-1234
-        </div>
       </div>
     );
   }

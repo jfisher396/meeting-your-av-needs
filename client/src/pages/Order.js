@@ -10,7 +10,7 @@ export default class Order extends Component {
     screens: [],
     laptops: [],
   };
-  
+
   handleProjectors = (projectors) => {
     this.setState({ projectors });
   };
@@ -28,7 +28,7 @@ export default class Order extends Component {
     return (
       <>
         <div className="grid-container">
-          <div className="grid-x grid-margin-x small-up-2 medium-up-3">
+          <div className="grid-x grid-margin-x medium-up-3">
             <div className="cell">
               <div className="card">
                 <div className="card-section">
@@ -53,15 +53,20 @@ export default class Order extends Component {
               </div>
             </div>
           </div>
-          <div>
-            <OrderTable
-              ordering={[
-                this.state.projectors,
-                this.state.screens,
-                this.state.laptops,
-              ]}
-              history = {this.props.history}
-            />
+
+          <div className="small-8 large-4 align-center">
+            <div className="cell">
+              <div className="card">
+                <OrderTable
+                  ordering={[
+                    this.state.projectors,
+                    this.state.screens,
+                    this.state.laptops,
+                  ]}
+                  history={this.props.history}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </>
