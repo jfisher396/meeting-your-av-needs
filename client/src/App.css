@@ -1,7 +1,8 @@
 body{
-    background-image: url("./media/meeting room.jpg");
+    background-image: url("./media/projectorlight.jpg");
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
     display: grid;
 }
 
@@ -34,3 +35,12 @@ footer p {
 footer span {
     text-decoration:
 }
+
+.success {
+    float: right;
+}
+
+.info {
+    margin-top: 20px;
+}
+

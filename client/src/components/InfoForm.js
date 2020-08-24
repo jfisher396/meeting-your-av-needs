@@ -31,7 +31,12 @@ export default function InfoForm() {
   return (
     <div>
       <div className="grid-container">
-        <div className="grid-x grid-margin-x">
+        <div className="grid-x grid-margin-x align-center small-8 large-4">
+          <div className="info card">
+            <div className="card-divider">
+              <h4>Please enter your name and email</h4>
+            </div>
+          <div className="card-section">
           <div className="cell medium-6">
             <form onSubmit={handleSubmit}>
               <input
@@ -58,6 +63,8 @@ export default function InfoForm() {
                 Click here to recieve confirmation email
               </button>
             </form>
+          </div>
+          </div>
           </div>
         </div>
       </div>
