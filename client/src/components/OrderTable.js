@@ -42,7 +42,7 @@ export default class OrderTable extends Component {
     const { orders, fetching } = this.state;
     return (
       <div className="small-8 large-4">
-        <div className="card">
+        <div className="cart card">
           <div className="card-divider">
             <h4>Your items:</h4>
           </div>

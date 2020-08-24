@@ -44,3 +44,6 @@ footer span {
     margin-top: 20px;
 }
 
+.cart {
+    min-height: 200px;
+}

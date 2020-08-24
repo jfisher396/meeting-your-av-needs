@@ -28,6 +28,11 @@ export default class Order extends Component {
     return (
       <>
         <div className="grid-container">
+          <div>
+            <h1></h1>
+          </div>
+
+
           <div className="grid-x grid-margin-x medium-up-3">
             <div className="cell">
               <div className="card">
