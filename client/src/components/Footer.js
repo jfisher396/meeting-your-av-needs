@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
     return (
-      <div className="footer">
+      <footer className="footer">
         <div classame="row">
           <div className="column">
             <h4>Contact Info</h4>
@@ -17,6 +17,6 @@ export default function Footer() {
             </p>
           </div>
         </div>
-      </div>
+      </footer>
     );
 }
