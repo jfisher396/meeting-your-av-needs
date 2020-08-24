@@ -32,8 +32,6 @@ export default class OrderTable extends Component {
       })
         .then(() => this.props.history.push("/customer-info"))
         .catch((err) => console.log(err));
-    } else {
-      alert("Please select at least one item");
     }
   };
 

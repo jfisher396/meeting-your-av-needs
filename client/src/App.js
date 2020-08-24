@@ -1,14 +1,13 @@
-import React from 'react';
-import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Navbar from "./components/Navbar"
-import Home from "./pages/Home"
-import Order from './pages/Order';
-import EnterInfo from './pages/EnterInfo';
-import Footer from './components/Footer'
+import React from "react";
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Order from "./pages/Order";
+import EnterInfo from "./pages/EnterInfo";
+import Footer from "./components/Footer";
 
 function App(props) {
-  
   return (
     <Router>
       <Navbar />
@@ -16,8 +15,8 @@ function App(props) {
         <Route path="/home">
           <Home />
         </Route>
-        <Route component = {Order} path="/order"/>
-          {/* <Order />
+        <Route component={Order} path="/order" />
+        {/* <Order />
         </Route> */}
         <Route path="/customer-info">
           <EnterInfo />

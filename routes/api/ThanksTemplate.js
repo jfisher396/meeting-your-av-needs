@@ -12,10 +12,15 @@ const Thanks = data => {
             <br />
             <br />
             <div>
-            <p>Thank you for your reservation! Your equipment will be ready for pickup within two hours of this confirmation.</p>
+                <p>Thank you for your reservation! Your equipment will be ready for pickup within two hours of this confirmation.</p>
             </div>
             <br />
             <br />
+            <div>
+                <p>Meeting Your (AV) Needs</p><br/>
+                <p>avneeds@email.com</p>
+                <p>800.555.1234</p>
+            </div>
         </body>
 
         </html>

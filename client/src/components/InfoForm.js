@@ -7,7 +7,7 @@ export default function InfoForm() {
 
   const handleClick = (e) => {
     e.preventDefault();
-
+    
     if (e.target.id === "name") {
       setName(e.target.value);
     } else {
@@ -59,6 +59,7 @@ export default function InfoForm() {
                 onClick={handleSubmit}
                 className="success button"
                 value="Confirm order"
+                data-open="exampleModal1"
               >
                 Click here to recieve confirmation email
               </button>
