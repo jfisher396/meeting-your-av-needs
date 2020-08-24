@@ -5,7 +5,7 @@ export default class OpeningCard extends Component {
   render() {
     return (
       
-        <div className="homeBox small-8 large-4">
+      <div className="homeBox small-8 large-4 animate__animated animate__backInDown">
           <a href="/order">
             <div className="card">
               <img src={projPic} alt="projector" />

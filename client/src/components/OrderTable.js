@@ -46,7 +46,7 @@ export default class OrderTable extends Component {
           <div className="card-divider">
             <h4>Your items:</h4>
           </div>
-          <div class="card-section">
+          <div className="card-section">
             {!fetching &&
               orders.flat().map((item, index) => {
                 return (

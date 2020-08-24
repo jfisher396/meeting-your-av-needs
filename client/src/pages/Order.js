@@ -54,7 +54,7 @@ export default class Order extends Component {
             </div>
           </div>
 
-          <div className="small-8 large-4 align-center">
+          <div className="grid-x grid-margin-x medium-up-3 align-center">
             <div className="cell">
               <div className="card">
                 <OrderTable
