@@ -29,7 +29,7 @@ export default class Order extends Component {
       <>
         <div className="grid-container">
           <div>
-            <h1>Please select you items:</h1>
+            <h3 className="select">Please select your items:</h3>
           </div>
 
 

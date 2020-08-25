@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Order from "./pages/Order";
 import EnterInfo from "./pages/EnterInfo";
-import Footer from "./components/Footer";
 
 function App(props) {
   return (
@@ -25,7 +24,6 @@ function App(props) {
           <Home />
         </Route>
       </Switch>
-      <Footer />
     </Router>
   );
 }

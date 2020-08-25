@@ -18,9 +18,7 @@ export default class ConfirmedOrder extends Component {
 
   render() {
     const { order } = this.state;
-    const flatArray = order.flat().map((item) => item);
-    console.log(flatArray.map((item) => item));
-    console.log([...order]);
+    
     return (
       <>
         <div className="small-8 large-4">
@@ -31,28 +29,25 @@ export default class ConfirmedOrder extends Component {
 
             <div className="card-section">
               {order.map((item,index) => {
-                console.log(item);
+                // console.log(item);
 
                 return (
                   <div id={index} key={index}>
                   {item.items.map((i, index) => {
             
-                  console.log(i);
+                  // console.log(item._id);
                   return (
                     <>
-
+                      
                       <p id={i._id} key={`${index}_${i._id}_${index}`}>
-                        {(i.proj && i.proj) ||
-                          (i.screen && i.screen) ||
-                          (i.comp && i.comp)}
+                        {(i.proj && i.proj) || (i.screen && i.screen) || (i.comp && i.comp)}
                       </p>
                     </>
                   );
-
                 })}
                 </div>
                 )
-                
+
               })}
             </div>
           </div>
