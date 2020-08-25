@@ -44,6 +44,7 @@ export default class OrderTable extends Component {
           <div className="card-divider">
             <h4>Your items:</h4>
           </div>
+          
           <div className="card-section">
             {!fetching &&
               orders.flat().map((item, index) => {
@@ -55,6 +56,7 @@ export default class OrderTable extends Component {
                   </p>
                 );
               })}
+
             <div>
               <Link to="/customer-info">
                 <button
@@ -66,6 +68,7 @@ export default class OrderTable extends Component {
                 </button>
               </Link>
             </div>
+
           </div>
         </div>
       </div>

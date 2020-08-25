@@ -18,49 +18,44 @@ export default class ConfirmedOrder extends Component {
 
   render() {
     const { order } = this.state;
+    const flatArray = order.flat().map((item) => item);
+    console.log(flatArray.map((item) => item));
+    console.log([...order]);
     return (
       <>
-        <div>
-          <table className="table">
-            <thead>
-              <tr>
-                <th scope="col">Cover</th>
-                <th scope="col">Title</th>
-                <th scope="col">Author(s)</th>
-              </tr>
-            </thead>
-            <tbody>
-              {order.map((item) => {
-                  console.log(item)
+        <div className="small-8 large-4">
+          <div className="cart card">
+            <div className="card-divider">
+              <h4>Your confirmed order:</h4>
+            </div>
+
+            <div className="card-section">
+              {order.map((item,index) => {
+                console.log(item);
+
                 return (
-                  <tr key={item._id}>
-                    
-                    <td>{item.title}</td>
-                    <td>{item.authors}</td>
-                    <td>{item.description}</td>
-                    <td>
-                      <a
-                        className="btn btn-info mt-3"
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Google Books
-                      </a>
-                    </td>
-                    <td>
-                      <button
-                        onClick={() => this.handleButtonClick(item._id)}
-                        className="btn btn-primary mt-3"
-                      >
-                        Remove
-                      </button>
-                    </td>
-                  </tr>
-                );
+                  <div id={index} key={index}>
+                  {item.items.map((i, index) => {
+            
+                  console.log(i);
+                  return (
+                    <>
+
+                      <p id={i._id} key={`${index}_${i._id}_${index}`}>
+                        {(i.proj && i.proj) ||
+                          (i.screen && i.screen) ||
+                          (i.comp && i.comp)}
+                      </p>
+                    </>
+                  );
+
+                })}
+                </div>
+                )
+                
               })}
-            </tbody>
-          </table>
+            </div>
+          </div>
         </div>
       </>
     );

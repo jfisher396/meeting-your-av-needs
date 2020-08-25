@@ -4,6 +4,8 @@ body{
     background-attachment: fixed;
     background-position: center;
     display: grid;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .homeBox {
@@ -21,9 +23,10 @@ body{
 }
 
 .footer {
-    /* position:; */
-    /* bottom: 0; */
-    /* right: 0; */
+    /* position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0; */
     background-color: whitesmoke;
     padding: 10px 50px;
     /* z-index: -1; */

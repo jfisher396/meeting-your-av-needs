@@ -3,7 +3,7 @@ const ordersController = require("../../controllers/ordersController");
 
 // Matches with "/api/projectors"
 router.route("/")
-    .get(ordersController.findAll)
+    .get(ordersController.findOne)
     .post(ordersController.create)
 
 // Matches with "/api/projectors/:id"
