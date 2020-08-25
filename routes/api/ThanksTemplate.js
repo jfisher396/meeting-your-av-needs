@@ -1,3 +1,5 @@
+
+
 const Thanks = data => {
     console.log(data)
     return `
@@ -16,6 +18,7 @@ const Thanks = data => {
             </div>
             <br />
             <br />
+            
             <div>
                 <p>Meeting Your (AV) Needs</p><br/>
                 <p>avneeds@email.com</p>
@@ -26,6 +29,7 @@ const Thanks = data => {
         </html>
 
     `;
+    
 };
 
 module.exports = { Thanks }

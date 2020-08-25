@@ -3,7 +3,7 @@ const { Thanks } = require("./ThanksTemplate");
 
 const getEmailData = (to, name, template) => {
     let data = null;
-
+  
     switch (template) {
       case "hello":
         data = {

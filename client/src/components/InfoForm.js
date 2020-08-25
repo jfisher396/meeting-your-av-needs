@@ -14,7 +14,6 @@ export default function InfoForm() {
       setEmail(e.target.value);
     }
 
-    
   };
 
   const handleSubmit = (e) => {
