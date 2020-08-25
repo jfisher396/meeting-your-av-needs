@@ -1,5 +1,4 @@
 
-
 const Thanks = data => {
     console.log(data)
     return `
