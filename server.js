@@ -2,7 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
-const path = require('path')
 const cookieParser = require('cookie-parser')
 const { sendEmail } = require("./routes/api/nodeMailer")
 
