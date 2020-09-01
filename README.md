@@ -1,9 +1,6 @@
 
   
-  # Project Title:
-  Meeting Your (AV) Needs
-
-  
+  # Meeting Your (AV) Needs
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
