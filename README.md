@@ -1,9 +1,6 @@
 
   
-  # Project Title:
-  Meeting Your (AV) Needs
-
-  
+  # Meeting Your (AV) Needs
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
@@ -12,7 +9,10 @@
   ## Description:
 
   A mobile-first portal for quickly ordering audivisual items for your meeting.
-
+  
+  ![GitHub Logo](/media/Screenshot%20(99).png)
+  
+  ![GitHub Logo](/media/Screenshot%20(100).png)
   ---
 
   ## Table of Contents:
