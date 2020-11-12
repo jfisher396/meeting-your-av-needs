@@ -5,6 +5,7 @@
 }
 
 body {
+  font-family: 'Roboto', sans-serif;
   background-image: url("./media/projectorlight.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -26,10 +27,12 @@ body {
 }
 
 .navbar p {
+  opacity: 0.5;
   font-size: 15px;
 }
 
 .card {
+  
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -89,4 +92,8 @@ body {
 
 .bold {
   font-weight: bold;
+}
+
+.info-div {
+  margin-top: 30px;
 }
