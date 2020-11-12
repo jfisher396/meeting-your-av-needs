@@ -1,3 +1,4 @@
+// Order confirmation email template
 
 const Thanks = data => {
     console.log(data)

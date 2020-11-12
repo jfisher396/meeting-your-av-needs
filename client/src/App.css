@@ -1,14 +1,20 @@
-body{
-    background-image: url("./media/projectorlight.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    display: grid;
-    overflow-x: hidden;
-    overflow-y: auto;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./media/projectorlight.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: grid;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .navbar {
-  padding:15px 25px;
+  padding: 15px 25px;
 }
 .contactDiv {
   display: inline-block;
@@ -22,43 +28,63 @@ body{
 .navbar p {
   font-size: 15px;
 }
+
+.card {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
 .homeBox {
-    /* border-radius: 25px; */
-    /* padding: 10px; */
-    background-color: whitesmoke;
-    /* border-style: solid; */
-    /* border-color: black; */
-    margin-top: 100px;
-    margin-bottom: 100px;
-    text-align: center;
+  /* border-radius: 25px; */
+  /* padding: 10px; */
+  background-color: whitesmoke;
+  /* border-style: solid; */
+  /* border-color: black; */
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 .table {
-    background-color: whitesmoke;
+  background-color: whitesmoke;
+  min-height: 325px;
 }
-
+.button {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
 .select {
-  color: whitesmoke
+  color: whitesmoke;
 }
 .footer {
-    position:;
-    bottom: 0;
-    right: 0;
-    /* left: 0; */
-    background-color: whitesmoke;
-    padding: 10px 50px;
-    /* z-index: -1; */
+  position: ;
+  bottom: 0;
+  right: 0;
+  /* left: 0; */
+  background-color: whitesmoke;
+  padding: 10px 50px;
+  /* z-index: -1; */
 }
 
 .success {
-    float: right;
+  float: right;
 }
 
 .info {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .cart {
-    min-height: 200px;
+  min-height: 200px;
 }
 
 .bold {

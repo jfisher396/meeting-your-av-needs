@@ -48,7 +48,7 @@ export default class Projectors extends Component {
                         <button
                           onClick={() => this.handleButtonClick(item._id)}
                           type="button"
-                          className="success button"
+                          className="success button select-btn"
                         >
                           Select
                         </button>

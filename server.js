@@ -1,3 +1,4 @@
+// variables
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
@@ -5,9 +6,10 @@ const app = express();
 const cookieParser = require('cookie-parser')
 const { sendEmail } = require("./routes/api/nodeMailer")
 
+// sets server port variable to whatever the Heroku host determines or if running locally, to use port 3001
 const PORT = process.env.PORT || 3001;
 
-// Define middleware here
+// 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
@@ -17,6 +19,7 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 }
 
+// Route for sending emails
 app.post("/api/sendMail", (req, res) => {
   console.log(req.body);
 
@@ -24,6 +27,7 @@ app.post("/api/sendMail", (req, res) => {
 
 });
 
+// Tells server to look in the routes folder for API routes
 app.use(routes);
 
 // Connect to the Mongo DB

@@ -57,7 +57,7 @@ export default class OrderTable extends Component {
                 );
               })}
 
-            <div>
+            <div id="cart-div">
               <Link to="/customer-info">
                 <button
                   onClick={this.handleButtonClick}
