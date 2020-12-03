@@ -48,13 +48,7 @@ export default class OrderTable extends Component {
           <div className="card-section">
             {!fetching &&
               orders.flat().map((item, index) => {
-                return (
-                  <p id={item._id} key={`${item._id}_${index}`}>
-                    {(item.proj && item.proj) ||
-                      (item.screen && item.screen) ||
-                      (item.comp && item.comp)}
-                  </p>
-                );
+                return (<p id={item._id} key={`${item._id}_${index}`}>{(item.proj && item.proj) || (item.screen && item.screen) || (item.comp && item.comp)}</p>);
               })}
 
             <div id="cart-div">

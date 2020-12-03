@@ -9,10 +9,11 @@ const { sendEmail } = require("./routes/api/nodeMailer")
 // sets server port variable to whatever the Heroku host determines or if running locally, to use port 3001
 const PORT = process.env.PORT || 3001;
 
-// 
+//middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
+
 // Serve up static assets (usually on heroku)
 app.use(express.static('public'))
 if (process.env.NODE_ENV === "production") {

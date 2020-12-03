@@ -1,7 +1,7 @@
 // Order confirmation email template
 
 const Thanks = data => {
-    console.log(data)
+    // console.log(data)
     return `
         <DOCTYPE html>
         <html style="margin: 0; padding: 0;">
