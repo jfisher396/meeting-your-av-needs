@@ -54,6 +54,12 @@ body {
   background-color: whitesmoke;
   min-height: 325px;
 }
+
+td {
+  background-color: #fff;
+  padding: 0;
+  
+}
 .button {
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -71,8 +77,14 @@ body {
   display: flex;
   justify-content: center; 
   align-self: flex-end;
-  margin: 0;
+  width: 100%;
+  margin: 5px 0px 0px 0px;
 }
+
+.select-btn {
+  margin-bottom: 0;
+}
+
 .select {
   color: whitesmoke;
 }
@@ -103,6 +115,11 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   padding: 0;
+}
+
+.cart-card p {
+  margin: 5px 20px
+  
 }
 
 .bold {

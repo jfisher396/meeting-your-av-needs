@@ -2,9 +2,9 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 // This file empties the Gears collection and inserts the items below
-mongoose.connect(
-  "mongodb+srv://heroku_3q4q4cqn:MongoMigration2020@cluster-3q4q4cqn.byeb2.mongodb.net/heroku_3q4q4cqn?retryWrites=true&w=majority"
-);
+// mongoose.connect(
+//   ""
+// );
 
 const gearSeed = [
   {
@@ -24,7 +24,7 @@ const gearSeed = [
     
   },
   {
-    comp: "Macbook Pro",
+    comp: "MacBook Pro Laptop",
     
   },
   {
@@ -32,11 +32,11 @@ const gearSeed = [
     
   },
   {
-    screen: "7' Screen",
+    screen: "6' Screen",
     
   },
   {
-    screen: "10' Screen",
+    screen: "8' Screen",
     
   },
 ];
