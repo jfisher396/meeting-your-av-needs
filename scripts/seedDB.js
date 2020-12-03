@@ -1,10 +1,11 @@
 const mongoose = require("mongoose");
 const db = require("../models");
+const env = require('dotenv').config();
 
 // This file empties the Gears collection and inserts the items below
-// mongoose.connect(
-//   ""
-// );
+const dataBaseConnection = process.env.DATABASE_CONNECT;
+
+mongoose.connect(dataBaseConnection);
 
 const gearSeed = [
   {
