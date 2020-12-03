@@ -15,7 +15,7 @@ export default class EnterInfo extends Component {
         </div>
         <div className="grid-x grid-margin-x small-6 medium-up-4 align-center">
           <div className="cell">
-            <div className="card card animate__animated animate__backInUp">
+            <div className="card animate__animated animate__backInUp">
               <ConfirmedOrder />
             </div>
           </div>

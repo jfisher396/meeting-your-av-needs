@@ -18,14 +18,11 @@ export default class OrderTable extends Component {
     }
   }
 
-  componentDidMount() {
-    // console.log(this.props.ordering.flat());
-  }
 
   handleButtonClick = (event) => {
     event.preventDefault();
     // console.log(this.state.orders)
-    //need an if statement here to confirm items have been selected
+    
     if (this.state.orders) {
       API.saveOrder({
         items: this.state.orders,
@@ -36,16 +33,16 @@ export default class OrderTable extends Component {
   };
 
   render() {
-    // console.log(this.state.orders.flat());
+    
     const { orders, fetching } = this.state;
     return (
-      <div className="small-8 large-4">
-        <div className="cart card">
+      
+        <div className="cart-card card">
           <div className="card-divider">
             <h4>Your items:</h4>
           </div>
           
-          <div className="card-section">
+          <div className="card-section cart-card__section">
             {!fetching &&
               orders.flat().map((item, index) => {
                 return (<p id={item._id} key={`${item._id}_${index}`}>{(item.proj && item.proj) || (item.screen && item.screen) || (item.comp && item.comp)}</p>);
@@ -56,7 +53,8 @@ export default class OrderTable extends Component {
                 <button
                   onClick={this.handleButtonClick}
                   type="button"
-                  className="primary button"
+                  className="primary button confirm-order-button"
+                  id="confirm-order-button"
                 >
                   Confirm order and go to customer info screen
                 </button>
@@ -65,7 +63,7 @@ export default class OrderTable extends Component {
 
           </div>
         </div>
-      </div>
+      
     );
   }
 }

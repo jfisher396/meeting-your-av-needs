@@ -32,7 +32,6 @@ body {
 }
 
 .card {
-  
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -40,11 +39,7 @@ body {
   -o-border-radius: 6px;
 }
 .homeBox {
-  /* border-radius: 25px; */
-  /* padding: 10px; */
   background-color: whitesmoke;
-  /* border-style: solid; */
-  /* border-color: black; */
   margin-top: 100px;
   margin-bottom: 100px;
   text-align: center;
@@ -54,6 +49,7 @@ body {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
 }
+
 .table {
   background-color: whitesmoke;
   min-height: 325px;
@@ -66,8 +62,16 @@ body {
   -o-border-radius: 5px;
 }
 
-#receive-email-button {
+#receive-email-button,
+#confirm-order-button {
   width: 100%;
+}
+
+#confirm-order-button {
+  display: flex;
+  justify-content: center; 
+  align-self: flex-end;
+  margin: 0;
 }
 .select {
   color: whitesmoke;
@@ -91,8 +95,14 @@ body {
   
 }
 
-.cart {
+.cart-card {
   min-height: 200px;
+}
+.cart-card__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0;
 }
 
 .bold {

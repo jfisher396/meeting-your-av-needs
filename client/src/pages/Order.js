@@ -61,7 +61,8 @@ export default class Order extends Component {
 
           <div className="grid-x grid-margin-x medium-up-3 align-center">
             <div className="cell">
-              <div className="card card animate__animated animate__backInUp">
+              
+              <div className="card animate__animated animate__backInUp">
                 <OrderTable
                   ordering={[
                     this.state.projectors,
@@ -71,6 +72,7 @@ export default class Order extends Component {
                   history={this.props.history}
                 />
               </div>
+
             </div>
           </div>
         </div>
