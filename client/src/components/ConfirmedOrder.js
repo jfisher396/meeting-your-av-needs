@@ -21,7 +21,7 @@ export default class ConfirmedOrder extends Component {
 
     return (
       <>
-        <div className="small-8 large-4">
+        
           <div className="cart card">
             <div className="card-divider">
               <h4>Your confirmed order:</h4>
@@ -50,7 +50,7 @@ export default class ConfirmedOrder extends Component {
               })}
             </div>
           </div>
-        </div>
+        
       </>
     );
   }

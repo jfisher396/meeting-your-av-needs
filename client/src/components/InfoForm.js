@@ -27,7 +27,7 @@ export default function InfoForm() {
   };
 
   return (
-    <div className="grid-x align-center small-8 large-4 info card">
+    <div className="card">
       <div className="card-divider">
         <h4>Please enter your name and email</h4>
       </div>
