@@ -2,21 +2,21 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 // This file empties the Gears collection and inserts the items below
-// mongoose.connect(
-//   "mongodb://heroku_3q4q4cqn:lrb29pjj757d4ps3jv871d6if5@ds047950.mlab.com:47950/heroku_3q4q4cqn"
-// );
+mongoose.connect(
+  "mongodb+srv://heroku_3q4q4cqn:MongoMigration2020@cluster-3q4q4cqn.byeb2.mongodb.net/heroku_3q4q4cqn?retryWrites=true&w=majority"
+);
 
 const gearSeed = [
   {
-    proj: "3000 Lumen WXGA",
+    proj: "1000 Lumen Projector",
     
   },
   {
-    proj: "6000 Lumen HD",
+    proj: "3000 Lumen Projector",
     
   },
   {
-    proj: "10000 Lumen HD",
+    proj: "5000 Lumen Projector",
     
   },
   {
