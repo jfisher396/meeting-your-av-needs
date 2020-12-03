@@ -1,10 +1,6 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-// This file empties the Gears collection and inserts the items below
-mongoose.connect(
-  "mongodb+srv://heroku_3q4q4cqn:MongoMigration2020@cluster-3q4q4cqn.byeb2.mongodb.net/heroku_3q4q4cqn?retryWrites=true&w=majority"
-);
 
 const gearSeed = [
   {
