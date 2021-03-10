@@ -8,14 +8,14 @@ export default class EnterInfo extends Component {
       <>
         <div className="grid-x grid-margin-x small-6 medium-up-4 align-center">
           <div className="cell">
-            <div className="info card animate__animated animate__backInDown">
+            <div className="info card">
               <InfoForm />
             </div>
           </div>
         </div>
         <div className="grid-x grid-margin-x small-6 medium-up-4 align-center">
           <div className="cell">
-            <div className="card animate__animated animate__backInUp">
+            <div className="card">
               <ConfirmedOrder />
             </div>
           </div>

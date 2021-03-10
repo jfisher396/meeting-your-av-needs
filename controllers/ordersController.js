@@ -1,6 +1,6 @@
 const db = require("../models");
 
-// Defining methods for the booksController
+// Defining methods for the ordersController
 module.exports = {
   findOne: function (req, res) {
     db.Order.find(req.query)

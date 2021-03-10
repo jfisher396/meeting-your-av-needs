@@ -35,7 +35,7 @@ export default class Order extends Component {
 
           <div className="grid-x grid-margin-x medium-up-3">
             <div className="cell">
-              <div className="card animate__animated animate__backInLeft">
+              <div className="card">
                 <div className="card-section">
                   <Projectors handleProjectors={this.handleProjectors} />
                 </div>
@@ -43,7 +43,7 @@ export default class Order extends Component {
             </div>
 
             <div className="cell">
-              <div className="card animate__animated animate__backInDown">
+              <div className="card">
                 <div className="card-section">
                   <Screens handleScreens={this.handleScreens} />
                 </div>
@@ -51,7 +51,7 @@ export default class Order extends Component {
             </div>
 
             <div className="cell">
-              <div className="card animate__animated animate__backInRight">
+              <div className="card">
                 <div className="card-section">
                   <Laptops handleLaptops={this.handleLaptops} />
                 </div>
@@ -62,7 +62,7 @@ export default class Order extends Component {
           <div className="grid-x grid-margin-x medium-up-3 align-center">
             <div className="cell">
               
-              <div className="card animate__animated animate__backInUp">
+              <div className="card">
                 <OrderTable
                   ordering={[
                     this.state.projectors,
