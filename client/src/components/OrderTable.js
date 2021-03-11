@@ -19,9 +19,9 @@ export default class OrderTable extends Component {
   }
 
 
-  handleButtonClick = (event) => {
+  handleConfirmOrder = (event) => {
     event.preventDefault();
-    // console.log(this.state.orders)
+    console.log(this.state.orders)
     
     if (this.state.orders) {
       API.saveOrder({
@@ -29,6 +29,8 @@ export default class OrderTable extends Component {
       })
         .then(() => this.props.history.push("/customer-info"))
         .catch((err) => console.log(err));
+    } else {
+      alert("no order")
     }
   };
 
@@ -51,7 +53,7 @@ export default class OrderTable extends Component {
             <div id="cart-div">
               <Link to="/customer-info">
                 <button
-                  onClick={this.handleButtonClick}
+                  onClick={this.handleConfirmOrder}
                   type="button"
                   className="primary button confirm-order-button"
                   id="confirm-order-button"

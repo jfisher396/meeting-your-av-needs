@@ -11,15 +11,15 @@ export default class Order extends Component {
     laptops: [],
   };
 
-  handleProjectors = (projectors) => {
+  handleProjectorSelect = (projectors) => {
     this.setState({ projectors });
   };
 
-  handleScreens = (screens) => {
+  handleScreenSelect = (screens) => {
     this.setState({ screens });
   };
 
-  handleLaptops = (laptops) => {
+  handleLaptopSelect = (laptops) => {
     this.setState({ laptops });
   };
 
@@ -37,7 +37,7 @@ export default class Order extends Component {
             <div className="cell">
               <div className="card">
                 <div className="card-section">
-                  <Projectors handleProjectors={this.handleProjectors} />
+                  <Projectors handleProjectors={this.handleProjectorSelect} />
                 </div>
               </div>
             </div>
@@ -45,7 +45,7 @@ export default class Order extends Component {
             <div className="cell">
               <div className="card">
                 <div className="card-section">
-                  <Screens handleScreens={this.handleScreens} />
+                  <Screens handleScreens={this.handleScreenSelect} />
                 </div>
               </div>
             </div>
@@ -53,7 +53,7 @@ export default class Order extends Component {
             <div className="cell">
               <div className="card">
                 <div className="card-section">
-                  <Laptops handleLaptops={this.handleLaptops} />
+                  <Laptops handleLaptops={this.handleLaptopSelect} />
                 </div>
               </div>
             </div>

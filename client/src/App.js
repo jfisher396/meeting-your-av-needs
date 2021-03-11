@@ -2,9 +2,9 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Order from "./pages/Order";
-import EnterInfo from "./pages/EnterInfo";
+import HomePage from "./pages/HomePage";
+import OrderPage from "./pages/OrderPage";
+import CustomerInfoPage from "./pages/CustomerInfoPage";
 
 function App() {
   return (
@@ -12,14 +12,14 @@ function App() {
       <Navbar />
       <Switch>
         <Route path="/home">
-          <Home />
+          <HomePage />
         </Route>
-        <Route component={Order} path="/order" />
+        <Route component={OrderPage} path="/order" />
         <Route path="/customer-info">
-          <EnterInfo />
+          <CustomerInfoPage />
         </Route>
         <Route exact path="/">
-          <Home />
+          <HomePage />
         </Route>
       </Switch>
     </Router>
