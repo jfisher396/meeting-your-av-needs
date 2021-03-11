@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import Order from "./pages/Order";
 import EnterInfo from "./pages/EnterInfo";
 
-function App(props) {
+function App() {
   return (
     <Router>
       <Navbar />
@@ -15,8 +15,6 @@ function App(props) {
           <Home />
         </Route>
         <Route component={Order} path="/order" />
-        {/* <Order />
-        </Route> */}
         <Route path="/customer-info">
           <EnterInfo />
         </Route>

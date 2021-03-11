@@ -6,12 +6,15 @@ export default class Laptops extends Component {
     laptops: [],
     orderLaptops: []
   };
+
+  // makes a call to the gears db, slices out the laptops from other items in the db and sets them to state in laptops.
   componentDidMount() {
     axios
       .get("/api/gears")
       .then((response) => this.setState({ laptops: response.data.slice(3, 5) }));
   }
 
+  // when "select" button is clicked the selected laptop is added to "orderProjectors" in state along with any previously added laptops
   handleButtonClick = (id) => {
     axios.get("/api/gears/" + id).then((response) => {
       this.setState((prevState) => ({
@@ -34,6 +37,7 @@ export default class Laptops extends Component {
               </tr>
             </thead>
             <tbody>
+              {/*iterates through the laptops array from state and renders each one to the table*/}
               {laptops.map((item) => {
                 return (
                   <tr key={item._id}>

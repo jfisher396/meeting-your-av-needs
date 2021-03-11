@@ -4,29 +4,35 @@ import axios from "axios";
 export default class Projectors extends Component {
   state = {
     projectors: [],
-    orderProjectors: []
+    orderProjectors: [],
   };
+
+  // makes a call to the gears db, slices out the projectors from other items in the db and sets them to state in projectors.
   componentDidMount() {
-    axios.get("/api/gears").then((response) => {
-      this.setState({ projectors: response.data.slice(0, 3) });
-    });
+    axios
+      .get("/api/gears")
+      .then((response) => {
+        this.setState({ projectors: response.data.slice(0, 3) });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 
+  // when "select" button is clicked the selected projector is added to "orderProjectors" in state along with any previously added projectors
   handleButtonClick = (id) => {
-    axios.get("/api/gears/"+ id).then((response) => {
+    axios.get("/api/gears/" + id).then((response) => {
       this.setState((prevState) => ({
-        orderProjectors: [
-          ...prevState.orderProjectors,response.data
-        ]
+        orderProjectors: [...prevState.orderProjectors, response.data],
       }));
-      // console.log(this.state.orderProjectors)
-      this.props.handleProjectors(this.state.orderProjectors)
-    })
+
+      this.props.handleProjectors(this.state.orderProjectors);
+    });
   };
 
   render() {
     const { projectors } = this.state;
-    // console.log(this.state)
+
     return (
       <>
         <div className="container">
@@ -38,23 +44,21 @@ export default class Projectors extends Component {
               </tr>
             </thead>
             <tbody>
+              {/*iterates through the projectors array from state and renders each one to the table*/}
               {projectors.map((item) => {
-              
                 return (
-                  
-                    <tr key={item._id}>
-                      <td>{item.proj}</td>
-                      <td>
-                        <button
-                          onClick={() => this.handleButtonClick(item._id)}
-                          type="button"
-                          className="success button select-btn"
-                        >
-                          Select
-                        </button>
-                      </td>
-                    </tr>
-                
+                  <tr key={item._id}>
+                    <td>{item.proj}</td>
+                    <td>
+                      <button
+                        onClick={() => this.handleButtonClick(item._id)}
+                        type="button"
+                        className="success button select-btn"
+                      >
+                        Select
+                      </button>
+                    </td>
+                  </tr>
                 );
               })}
             </tbody>

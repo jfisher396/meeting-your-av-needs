@@ -16,6 +16,7 @@ export default function InfoForm() {
   };
 
   const handleSubmit = (e) => {
+    console.log(e)
     e.preventDefault();
 
     const dataToSubmit = {
@@ -23,7 +24,10 @@ export default function InfoForm() {
       email: email,
     };
     axios.post("/api/sendMail", dataToSubmit);
+    
     alert("Thank you for your order!");
+
+
   };
 
   return (
@@ -55,7 +59,6 @@ export default function InfoForm() {
               onClick={handleSubmit}
               className="success button"
               value="Confirm order"
-              data-open="exampleModal1"
             >
               Click here to recieve confirmation email
             </button>
