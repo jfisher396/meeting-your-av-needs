@@ -4,7 +4,7 @@ import API from "../utils/API";
 
 export default class Cart extends Component {
   state = {
-    orders: [],
+    cartItems: [],
     fetching: true,
   };
 
@@ -13,27 +13,29 @@ export default class Cart extends Component {
   componentDidUpdate(prevProps) {
     if (prevProps.inCart !== this.props.inCart) {
       this.setState({
-        orders: this.props.inCart,
+        cartItems: this.props.inCart.flat(),
         fetching: false,
       });
     }
   }
 
+  // if there is 1 item or more in cart then create an order in the db
   handleConfirmOrder = (event) => {
     event.preventDefault();
-    console.log(this.state.orders);
 
-    if (this.state.orders) {
+    if (this.state.cartItems.length > 0) {
       API.saveOrder({
-        items: this.state.orders,
+        items: this.state.cartItems,
       })
         .then(() => this.props.history.push("/customer-info"))
         .catch((err) => console.log(err));
-    } 
+    } else {
+      alert("Please add item to the cart!");
+    }
   };
 
   render() {
-    const { orders, fetching } = this.state;
+    const { cartItems, fetching } = this.state;
     return (
       <div className="cart-card card">
         <div className="card-divider">
@@ -42,7 +44,7 @@ export default class Cart extends Component {
 
         <div className="card-section cart-card__section">
           {!fetching &&
-            orders.flat().map((item, index) => {
+            cartItems.map((item, index) => {
               return (
                 <p id={item._id} key={`${item._id}_${index}`}>
                   {(item.proj && item.proj) ||
