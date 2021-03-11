@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import Projectors from "../components/ProjectorsList";
 import Screens from "../components/ScreensList";
 import Laptops from "../components/CompList";
-import OrderTable from "../components/OrderTable";
+import Cart from "../components/Cart";
 
 export default class Order extends Component {
+  
   state = {
     projectors: [],
     screens: [],
@@ -31,8 +32,6 @@ export default class Order extends Component {
           <div>
             <h3 className="select">Please select your items:</h3>
           </div>
-
-
           <div className="grid-x grid-margin-x medium-up-3">
             <div className="cell">
               <div className="card">
@@ -41,7 +40,6 @@ export default class Order extends Component {
                 </div>
               </div>
             </div>
-
             <div className="cell">
               <div className="card">
                 <div className="card-section">
@@ -49,7 +47,6 @@ export default class Order extends Component {
                 </div>
               </div>
             </div>
-
             <div className="cell">
               <div className="card">
                 <div className="card-section">
@@ -58,13 +55,11 @@ export default class Order extends Component {
               </div>
             </div>
           </div>
-
           <div className="grid-x grid-margin-x medium-up-3 align-center">
             <div className="cell">
-              
               <div className="card">
-                <OrderTable
-                  ordering={[
+                <Cart
+                  inCart={[
                     this.state.projectors,
                     this.state.screens,
                     this.state.laptops,
@@ -72,7 +67,6 @@ export default class Order extends Component {
                   history={this.props.history}
                 />
               </div>
-
             </div>
           </div>
         </div>
