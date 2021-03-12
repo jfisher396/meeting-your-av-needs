@@ -54,6 +54,10 @@ export default class Screens extends Component {
                   </tr>
                 );
               })}
+              <tr className="tr-bottom">
+                <td className="smaller-text tr-bottom">Screen skirt included</td>
+                <td></td>
+              </tr>
             </tbody>
           </table>
         </div>

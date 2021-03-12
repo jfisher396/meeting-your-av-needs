@@ -45,8 +45,9 @@ export default class Projectors extends Component {
             </thead>
             <tbody>
               {/*iterates through the projectors array from state and renders each one to the table*/}
-              {projectors.map((item) => {
+              {projectors.map((item, index) => {
                 return (
+                  
                   <tr key={item._id}>
                     <td>{item.proj}</td>
                     <td>
@@ -59,8 +60,14 @@ export default class Projectors extends Component {
                       </button>
                     </td>
                   </tr>
+                 
                 );
+                
               })}
+              <tr>
+                <td className="smaller-text">Power and video cables included</td>
+                <td></td>
+              </tr>
             </tbody>
           </table>
         </div>

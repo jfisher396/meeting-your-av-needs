@@ -5,19 +5,19 @@ export default class ConfirmedOrder extends Component {
   state = {
     order: [],
   };
-
+  // calls the latest order from the db at page load
   componentDidMount() {
     this.orderApi();
   }
 
+  // makes a call to the db and puts the return data into state as "order"
   orderApi() {
     axios.get("/api/orders").then((response) => {
       return this.setState({ order: response.data });
     });
   }
 
-  
-
+  //renders the data from order in state to the page
   render() {
     
     const { order } = this.state;
@@ -43,12 +43,12 @@ export default class ConfirmedOrder extends Component {
 
                     return (
                       <>
-                        <p id={`item${index}`} key={i._id}>{i.proj || i.screen || i.comp}</p>
+                        <p key={i._id} id={`item${index}`}>{i.proj || i.screen || i.comp}</p>
                       </>
                     );
                   })}
-                  {/* <p className="order-info">{`Order #: ${orderId}`}</p> */}
-                  <p className="order-info">{orderDate}</p>
+                  {/* <p className="smaller-text">{`Order #: ${orderId}`}</p> */}
+                  <p className="smaller-text">{orderDate}</p>
                 </div>
                 
               );

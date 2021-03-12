@@ -56,6 +56,10 @@ export default class Laptops extends Component {
                   </tr>
                 );
               })}
+              <tr>
+                <td className="smaller-text">Power and video cables included</td>
+                <td></td>
+              </tr>
             </tbody>
           </table>
         </div>

@@ -25,7 +25,7 @@ export default class Order extends Component {
   };
 
   render() {
-    // console.log(this.state)
+    
     return (
       <>
         <div className="grid-container">
