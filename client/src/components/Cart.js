@@ -36,6 +36,7 @@ export default class Cart extends Component {
 
   render() {
     const { cartItems, fetching } = this.state;
+    
     return (
       <div className="cart-card card">
         <div className="card-divider">

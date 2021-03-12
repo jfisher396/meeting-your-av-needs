@@ -39,6 +39,8 @@ export default class Laptops extends Component {
             <tbody>
               {/*iterates through the laptops array from state and renders each one to the table*/}
               {laptops.map((item) => {
+
+                
                 return (
                   <tr key={item._id}>
                     <td>{item.comp}</td>
