@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import InfoForm from "../components/InfoForm";
 import Projectors from "../components/ProjectorsList";
 import Screens from "../components/ScreensList";
 import Laptops from "../components/CompList";

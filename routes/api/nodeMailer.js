@@ -22,8 +22,7 @@ const getEmailData = (to, name, template) => {
           html: Thanks(),
         }
         break;
-        default:
-            data;
+        default: data;
     }
     return data;
 

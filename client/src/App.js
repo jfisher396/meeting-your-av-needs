@@ -14,8 +14,7 @@ function App() {
         <Route path="/home">
           <HomePage />
         </Route>
-          <Route component={OrderPage} path="/order">
-        </Route>
+        <Route component={OrderPage} path="/order" />
         <Route path="/customer-info">
           <CustomerInfoPage />
         </Route>

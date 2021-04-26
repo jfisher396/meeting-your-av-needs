@@ -16,7 +16,7 @@ export default function InfoForm() {
   };
 
   const handleSubmit = (e) => {
-    console.log(e)
+    
     e.preventDefault();
 
     const dataToSubmit = {
@@ -27,7 +27,7 @@ export default function InfoForm() {
     
     alert("Thank you for your order!");
 
-
+    
   };
 
   return (

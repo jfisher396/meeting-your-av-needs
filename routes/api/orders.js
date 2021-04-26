@@ -7,7 +7,8 @@ router.route("/")
     .post(ordersController.create)
 
 // Matches with "/api/projectors/:id"
-router.route("/:id").get(ordersController.findById);
+router.route("/:id")
+    .get(ordersController.findById);
 // .put(projController.update)
 // .delete(projController.remove);
 
